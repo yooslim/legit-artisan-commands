@@ -1,6 +1,6 @@
 {
 	"name": "yooslim/legit-artisan-commands",
-	"description": "A Laravel 9 package that allows to enforce security for your artisan commands by authenticating users before running commands.",
+	"description": "A Laravel 9 package that allows you enforce security of your artisan commands by authenticating users before running.",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
