@@ -1,0 +1,33 @@
+{
+	"name": "yooslim/legit-artisan-commands",
+	"description": "A Laravel 9 package that allows to enforce security for your artisan commands by authenticating users before running commands.",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Slimani Youcef",
+			"email": "slimani.youcef.09@gmail.com"
+	  	}
+	],
+	"require": {
+        "php": "^8.0.2",
+		"laravel/framework": "^9.11"
+    },
+	"autoload": {
+		"psr-4": {
+			"YOoSlim\\LegitArtisanCommands\\": "src/"
+		}
+	},
+	"autoload-dev": {
+        "psr-4": {
+            "YOoSlim\\LegitArtisanCommands\\Tests\\": "tests/"
+        }
+    },
+	"extra": {
+		"laravel": {
+			"providers": [
+				"YOoSlim\\LegitArtisanCommands\\Providers\\LegitCommandsServiceProvider"
+			]
+		}
+	}
+}
