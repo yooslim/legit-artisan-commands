@@ -25,7 +25,7 @@ class LegitCommandsServiceProvider extends ServiceProvider
 	{
         // Publish config file
         $this->publishes([
-            __DIR__.'/../../config/legit-commands.php' => config_path('legit-artisan-commands.php'),
+            __DIR__.'/../../config/legit-artisan-commands.php' => config_path('legit-artisan-commands.php'),
         ]);
 
 		// Load migrations files on app boot
