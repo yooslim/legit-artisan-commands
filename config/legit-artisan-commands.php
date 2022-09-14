@@ -32,7 +32,15 @@ return [
 		'size' => 16,
 	],
 
+	/*
+	|--------------------------------------------------------------------------
+	| Model relationships
+	|--------------------------------------------------------------------------
+	|
+	| The user model with whom the token model will be associated.
+	|
+	*/
 	'relationships' => [
-		'user' => 'Domains\Authentication\Models\User',
+		'user' => 'App\Models\User',
 	]
 ];

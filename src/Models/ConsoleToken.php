@@ -46,8 +46,8 @@ class ConsoleToken extends Model
     {
         parent::boot();
         static::creating(function (ConsoleToken $model) {
-            $model->value = Str::random(config('legit-commands.token.size', 8));
-            $model->expires_at = now()->addSeconds(config('legit-commands.token.lifetime', 60));
+            $model->value = Str::random(config('legit-artisan-commands.token.size', 8));
+            $model->expires_at = now()->addSeconds(config('legit-artisan-commands.token.lifetime', 60));
         });
     }
 
@@ -56,7 +56,7 @@ class ConsoleToken extends Model
 	 */
 	public function user(): BelongsTo
     {
-        return $this->belongsTo(config('legit-commands.relationships.user'), 'user_id');
+        return $this->belongsTo(config('legit-artisan-commands.relationships.user'), 'user_id');
     }
 
 	/**

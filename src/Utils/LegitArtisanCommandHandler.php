@@ -17,7 +17,7 @@ class LegitArtisanCommandHandler
 
 	public function __construct()
 	{
-		$this->forceCommand = in_array(config('app.env'), config('legit-commands.ignored_envs', []));
+		$this->forceCommand = in_array(config('app.env'), config('legit-artisan-commands.ignored_envs', []));
 	}
 
 	/**

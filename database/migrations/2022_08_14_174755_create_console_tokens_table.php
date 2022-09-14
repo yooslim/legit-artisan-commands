@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('console_tokens', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('user_id')->constrained(app(config('legit-commands.relationships.user'))->getTable())->onDelete('cascade');
+            $table->foreignId('user_id')->constrained(app(config('legit-artisan-commands.relationships.user'))->getTable())->onDelete('cascade');
             $table->string('value')->index();
             $table->dateTime('expires_at');
 

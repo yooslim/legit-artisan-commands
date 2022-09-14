@@ -26,7 +26,7 @@ class ArtisanAuthenticationHandler
 	public static function authenticateUser(string $username, string $password): ?ArtisanUserInterface
 	{
 		if (!is_callable(static::$callback)) {
-			$user = app(config('legit-commands.relationships.user'))::where('email', $username)->first();
+			$user = app(config('legit-artisan-commands.relationships.user'))::where('email', $username)->first();
 
 			if ($user && Hash::check($password, $user->password)) return $user;
 	
