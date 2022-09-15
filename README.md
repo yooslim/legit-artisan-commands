@@ -4,9 +4,9 @@ This package allows you as a developer to restrict who can and cannot run artisa
 # How it works ?
 An artisan user will be provided with a token in order to use it as an option when running commands. This token has a configurable size and lifetime. The user can use this token as much as he wants until it expires or is revoked.
 
-In order to get this token, a console user must first perform an authentication within the console, if the authentication is successful, the user will be prompted with the token, otherwise, a warning message will be displayed.
+In order to get this token, an artisan user must first perform an authentication within the console, if the authentication is successful, the user will be prompted with the token, otherwise, a warning message will be displayed.
 
-The logic of authentication is customizable, the developer can put in place his own validation rules. For exemple, one would want to authorize user only if he has and "admin" role, an other one would also check if he has the right permission, another one would fetch an active directory or external authentication service, etc.
+The logic of authentication is customizable, the developer can put in place his own validation rules. For exemple, one would want to authorize a user only if he has an "admin" role, an other one would check if he has the right permissions, another one would fetch an active directory or external authentication service, etc.
 
 # How to implement it !
 A few steps to put this in place.
