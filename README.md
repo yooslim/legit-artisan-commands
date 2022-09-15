@@ -109,9 +109,7 @@ class FilesPurgeCommand extends Command
         LegitArtisanCommand::authentify($this->option('token'))
             ->isAuthorized(function (?ConsoleToken $token) {
                 // The rest of your command
-            })->isNotAuthorized(function ($exception) {
-                $this->error($exception->getMessage());
-            });
+            })->isNotAuthorized(fn ($exception) => $this->error($exception->getMessage()));
     }
 ```
 # How to use it !
